@@ -1,0 +1,142 @@
+extends layout
+
+block content
+  .animsition-overlay
+    #contact_top
+      h2#title-sub1 CONTACT US
+        // END colw_6 
+      div#logo
+        img#tilogo_contact(src='img/logo.svg', alt='logo')      
+          
+        // END col_6
+      // END row
+    // End GRID FLEX16
+    .grid
+      .row.paddtop100
+        .col_12
+          h2.title-small.center We love working with clients who love to standout from the crowd
+        // END col_12
+        .colw_6.spec-l-cont.border-right
+          h3#contactinfo Contact Info
+          |         
+          ul.contact
+            li
+              |525 West Stephenson. Freeport IL 61032 US
+              span
+                i.fa.fa-map-marker          
+            li
+              |+1 (815) 315-0500
+              span
+                i.fa.fa-phone
+                   
+            li
+              |+1 (555) 543-4568 
+              span
+                i.fa.fa-fax
+            li
+              |m.potempa@twinimageinc.com
+              span
+                i.fa.fa-envelope
+            |  
+            .social
+              a.soc-btn.facebook(href='https://www.facebook.com/Valeron-design-studio-245216518822368/')
+                i.fa.fa-facebook
+                    | Facebook
+                    |  
+              a.soc-btn.twitter(href='https://twitter.com/ds_valeron')
+                i.fa.fa-twitter
+                  | Twitter
+                  |  
+              a.soc-btn.google5(href='https://plus.google.com/116499013539302933204')
+                i.fa.fa-google
+                  | Google +
+
+          a(href='https://goo.gl/x8GCVf')
+            img.full-width(src='img/google-map.PNG', alt='Google Maps')
+        // END col_6
+        .colw_6.paddbott100.spec-r-cont
+          h3 Contact Form
+          |         
+          .slickwrap
+            .slickreporting
+              .successcontainer
+              |             
+              .errorcontainer
+                .errorshutter
+                |               
+                .slickerror
+            |           
+            form#slickform(method='post', action='javascript:slickcontactparse();')
+              fieldset
+                label
+                  span *
+                  | Name
+                |               
+                input#name(name='name', type='text', value='')
+                |               
+                br
+                |               
+                label
+                  span *
+                  | Phone
+                |               
+                input#phone(name='phone', type='text', value='')
+                |               
+                br
+                |               
+                label
+                  span *
+                  | Email
+                |               
+                input#email(name='email', type='text', value='')
+                |               
+                br
+                |               
+                label
+                  span *
+                  | Comment
+                |               
+                textarea#comment.largertextarea(name='comment', cols='5', rows='5')
+                |               
+                h3 Are You Human?
+                |               
+                br
+                |               
+                label
+                  span *
+                  |  12 + 3
+                |               
+                input#human.areyouhuman(name='human', type='text', value='')
+                |               
+                hr
+                |               
+                input.slickbutton(name='submit', type='submit', value='Contact Us')
+        // END col_6
+      // END row
+    // End GRID FLEX16
+    .grid
+  // END .animsition-overlaj
+  script(src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+  |  
+  script(type='text/javascript', src='javascripts/jquery.matchHeight-min.js')
+  |  
+  script(src='javascripts/wow.min.js')
+  |  
+  script(src='javascripts/animsition.min.js')
+  |  
+  script(src='javascripts/Slickform.js')
+  |  
+  script(src='javascripts/functions.js')
+  |  
+  link(rel='stylesheet', type='text/css', href='stylesheets/social.css')
+  link(rel='stylesheet', type='text/css', href='stylesheets/slickform.css')
+
+  script(type='text/javascript').
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-15815880-3']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();

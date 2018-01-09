@@ -1,0 +1,130 @@
+block content
+    
+    link(rel='stylesheet', type='text/css', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css')
+    link(rel='stylesheet', type='text/css', href='../stylesheets/menu.css')
+    link(rel='stylesheet', type='text/css', href='../stylesheets/style.css')
+    link(rel='stylesheet', type='text/css', href='../stylesheets/projects.css')
+
+    script(src='https://code.jquery.com/jquery-3.2.1.slim.min.js', integrity='sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=', crossorigin='anonymous')  
+    script(type='text/javascript', src='../javascripts/jquery.matchHeight-min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
+    script(src='../javascripts/animsition.min.js')
+    script(src='../javascripts/wow.min.js')
+    script(src='../javascripts/functions.js')
+    script(src='../javascripts/MyPaginationClass.js')
+
+    	
+    .animsition-overlay-slide.overlay-slide-in-bottom
+     .animsition-overlay
+      #section-1
+        header.main_h
+          .menufix
+            a.logo(href='/')
+              img#navlogo(src='../img/navlogo.svg', alt='logo' width="100px")
+            .mobile-toggle
+              span
+              span
+              span
+            nav
+              ul
+                li.line
+                  a.out(href='/') HOME
+                li.line
+                  a.out(href='/service') SERVICES
+                li.line
+                  a.out(href='/projects/1') PROJECTS
+                li.line
+                  a.out(href='/contact') CONTACT
+
+    .projectspaginationtop
+      ul.pagination.text-center
+        if pages > 0 
+                if current == 1
+                  li.disabled
+                   a First   
+                else 
+                  li
+                   a(href="/projects/1") First
+
+        - var p = (Number(current) > 5 ? Number(current) - 4 : 1)
+                if p !== 1
+                  li.disabled 
+                   a ...   
+
+        - for (var n = 1; n <= (Number(current) + 4) && n <= pages; n++)
+                if n == current
+                  li.active 
+                   a= n
+                else
+                  li
+                   a(href='/projects/' + n)= n   
+                if n == Number(current) + 4 && n < pages 
+                  li.disabled 
+                   a ... 
+            
+        if current == pages
+             li.disabled
+              a Last
+        else
+             li
+              a(href='/projects/'+`${pages}`) Last 
+
+    .container
+      .row
+      - for(var i = 0; i < projects.length; i++)
+       .col-md-4
+        .thumbnail
+         img(src= `${projects[i].cover}` )
+         .caption
+           h3 #{projects[i].name}
+           p #{projects[i].category}
+           p #{projects[i].price}
+
+    .projectspaginationbottom
+      ul.pagination.text-center
+        if pages > 0 
+                if current == 1
+                  li.disabled
+                   a First   
+                else 
+                  li
+                   a(href="/projects/1") First
+
+        - var p = (Number(current) > 5 ? Number(current) - 4 : 1)
+                if p !== 1
+                  li.disabled 
+                   a ...   
+
+        - for (var n = 1; n <= (Number(current) + 4) && n <= pages; n++)
+                if n == current
+                  li.active 
+                   a= n
+                else
+                  li
+                   a(href='/projects/' + n)= n   
+                if n == Number(current) + 4 && n < pages 
+                  li.disabled 
+                   a ... 
+            
+        if current == pages
+             li.disabled
+              a Last
+        else
+             li
+              a(href='/projects/'+`${pages}`) Last 
+
+    p.dolje
+     a.linkline(href='https://goo.gl/x8GCVf') 
+      | 2005 - 
+      script.
+        document.write(new Date().getFullYear())
+      |  Twin Images Design | 525 West Stephenson. Freeport IL 61032 US           
+
+
+           
+            
+          
+         
+        
+

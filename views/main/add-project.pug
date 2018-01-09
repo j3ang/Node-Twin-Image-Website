@@ -1,0 +1,23 @@
+doctype html
+html(lang='en')
+  head
+    title
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+  body
+    .container
+      .row
+        .col-lg-6.col-md-offset-3
+          h1 Add a New Product
+          form(method='post')
+            .panel.panel-default
+              .panel-body
+                .form-group
+                  label(for='category_name') Category Name: 
+                  input#category_name.form-control(type='text', name='category_name')
+                .form-group
+                  label(for='product_name') Product Name: 
+                  input#product_name.form-control(type='text', name='project_name')
+                .form-group
+                  label(for='product_price') Product Price: 
+                  input#product_price.form-control(type='text', name='project_price')
+                button.btn.btn-success(type='submit') Success

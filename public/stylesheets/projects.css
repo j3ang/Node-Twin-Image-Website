@@ -1,0 +1,41 @@
+.caption {
+  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+  padding: 0 0.6em;
+  text-shadow: none;
+  line-height: 1.2em;
+  padding: 0.25em 0.5em;
+  width: auto;
+  height: auto;
+  text-align: center;
+  /*visibility: hidden;*/
+  float: center;
+  color:black;
+}
+
+.caption p{
+    font-family: roboto;
+    color: black;
+    text-align: left;
+    font-weight: 350;
+}
+
+.caption h3{
+font-size: 150%;
+    font-weight: 350;
+    color: black;
+}
+
+.projectspaginationtop{
+  display: block;
+  text-align: center;
+  margin-top: 5em;
+  margin-bottom: 1.5em;
+}
+
+
+.projectspaginationbottom{
+  display: block;
+  text-align: center;
+  margin-bottom: 5em;
+
+}
